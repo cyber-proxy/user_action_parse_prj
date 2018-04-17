@@ -108,8 +108,8 @@ public class ParseUserPathLog {
         
         Utils.println("do statics");
 
-        doStatics();
-        exit_Statics();
+        doStatics(fileNames);
+        exit_Statics(fileNames);
 
     }
 
@@ -191,7 +191,7 @@ public class ParseUserPathLog {
      *  循环打印各个元素值与total的和。
      *  疑问：none里面的值是如何确定的？这么样的统计意义何在？？？因为总数始终都是不变的，其值等于path里面的行数，即用户总数.
      */
-    private void doStatics() {
+    private void doStatics(String ...fileNames) {
     	Utils.consolePrint("开始计算比例：\n");
     	String deString = "";
     	int exitTotalBefore = 0;
@@ -263,7 +263,7 @@ public class ParseUserPathLog {
 					continue;
 				}
                 if (value > 0) {
-                	deString = Utils.getDescrib(stringKey);
+                	deString = Utils.getDescrib(stringKey,fileNames);
                 	if(total > 0){
                 		percentOfPerActionAction = value / total;
                 	}else{
@@ -406,18 +406,22 @@ public class ParseUserPathLog {
         Utils.printStrArray(maxStrArray);
     }
     
-    private void exit_Statics(){
+    private void exit_Statics(String ...fileNames){
     	String key_before_back = "none";
     	int count_before_back = 0;
     	double amountOfHomeBack = 0;
     	double amountOfDoubleBack = 0;
     	double deviceAmount = actionPathList.size();
+    	
     	for(String[] actionPath : actionPathList){
     		count_before_back = 0;
     		key_before_back = "none";
     		
-    		step_statics.put(actionPath.length, Utils.getValueOfMap(step_statics, actionPath.length)+1);
-    		last_action_statics.put(actionPath[actionPath.length-1], Utils.getValueOfMap(last_action_statics, actionPath[actionPath.length-1])+1);
+    		if(actionPath.length>0) {
+    			step_statics.put(actionPath.length, Utils.getValueOfMap(step_statics, actionPath.length)+1);
+    			last_action_statics.put(actionPath[actionPath.length-1], Utils.getValueOfMap(last_action_statics, actionPath[actionPath.length-1])+1);
+    		
+    		}
     		
     		if (actionPath.length < 3) {
     			if (actionPath.length == 2) {
@@ -461,7 +465,7 @@ public class ParseUserPathLog {
     	Iterator<Entry<String, Integer>> iterator = home_exit_static.entrySet().iterator();
 		Utils.println(Utils.format("%-20s%5s", "操作","比例"));    
     	for(Map.Entry<String, Integer> entry : home_exit_static_list){
-    		Utils.println(Utils.format("%-20s%5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey()), Utils.getFormat3Str(entry.getValue()/amountOfHomeBack)));    		
+    		Utils.println(Utils.format("%-20s%5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey(),fileNames), Utils.getFormat3Str(entry.getValue()/amountOfHomeBack)));    		
 		};
     	
     	Utils.println("................................");    	
@@ -471,7 +475,7 @@ public class ParseUserPathLog {
     	Collections.sort(double_click_statics_list, Utils.strKeyComparator);
 		Utils.println(Utils.format("%-20s%5s", "操作","比例"));    
     	for(Map.Entry<String, Integer> entry : double_click_statics_list){
-    		Utils.println(Utils.format("%-20s%5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey()), Utils.getFormat3Str(entry.getValue()/amountOfDoubleBack)));
+    		Utils.println(Utils.format("%-20s%5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey(),fileNames), Utils.getFormat3Str(entry.getValue()/amountOfDoubleBack)));
     	}
     	
     	Utils.println("................................");    	
@@ -513,7 +517,7 @@ public class ParseUserPathLog {
     	Collections.sort(last_action_statics_list, Utils.strKeyComparator);
 		Utils.println(Utils.format("%-20s%5s", "操作","比例")); 
     	for (Entry<String, Integer> entry : last_action_statics_list) {
-			Utils.println(Utils.format("%-20s%-5s", entry.getKey()+"-"+Utils.getDescrib(entry.getKey()), Utils.getFormat2Str(entry.getValue()/deviceAmount)));
+			Utils.println(Utils.format("%-20s%-5s", entry.getKey()+"-"+Utils.getDescrib(entry.getKey(),fileNames), Utils.getFormat2Str(entry.getValue()/deviceAmount)));
 		} 
     	
 		double action_2_step = step_statics.get(2);    	
@@ -524,7 +528,7 @@ public class ParseUserPathLog {
     	Collections.sort(action_exit_2_step_statics_list, Utils.strKeyComparator);
 		Utils.println(Utils.format("%-20s%5s", "操作","比例"));
     	for (Entry<String, Integer> entry : action_exit_2_step_statics_list) {
-			Utils.println(Utils.format("%-20s%-5s", entry.getKey()+"-"+Utils.getDescrib(entry.getKey()), Utils.getFormat2Str(entry.getValue()/action_2_step)));
+			Utils.println(Utils.format("%-20s%-5s", entry.getKey()+"-"+Utils.getDescrib(entry.getKey(),fileNames), Utils.getFormat2Str(entry.getValue()/action_2_step)));
 		}
     	
     }

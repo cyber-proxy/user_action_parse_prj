@@ -6,7 +6,6 @@ import com.exam.useractionparse.utils.Utils;
 
 public class Main {
 	static int i;
-	
 	public static void main(String args[]) {
 		if (i < 0) {
 			
@@ -56,17 +55,18 @@ public class Main {
 			Utils.resultFileHandle.close();
 			
 			Runtime runtime = Runtime.getRuntime();
-			runtime.exec("cmd /c start notepad++ " + Utils.resultFileName.toString());
+			runtime.exec("cmd /c start notepad " + Utils.resultFileName.toString());
 		}catch (Exception e) {
 			e.printStackTrace();
 		}  
 	    
 	}
 	
-	private static void showHelp(){
-		System.out.println("help:\n"
-				+ "\t-parse \"F:\\user_path\\user_path_s2.log.2017-05-02\" \"F:\\user_path\\user_path.log.2017-05-02\"\n"
-				+ "\t-unistall \"F:\\user_path\\user_path_s2.log.2017-05-02\" \"F:\\user_path\\user_path.log.2017-05-02\"");
+	public static void showHelp(){
+		System.out.println("help for example:\n"
+				+ "\t-parse \"F:\\user_path\\user_path_s2.log.2017-05-02\" .xls \"F:\\user_path\\user_path.log.2017-05-02.xls\"\n"
+				+ "\t-unistall \"F:\\user_path\\user_path_s2.log.2017-05-02\" \"F:\\user_path\\user_path.log.2017-05-02\""
+				+ "\nFYA:your file path that filled in must have a excel file");
 		System.exit(0);		
 	}
 

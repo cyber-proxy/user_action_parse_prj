@@ -1,6 +1,7 @@
 package com.exam.useractionparse.utils;
 
 import java.awt.print.Printable;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,7 +20,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.exam.useractionparse.cfg.Config;
+import com.exam.useractionparse.cfg.ConstantValue;
 import com.exam.useractionparse.data.NewUserAction;
+import com.exam.useractionparse.main.Main;
+
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
 
 public class Utils {
 	
@@ -56,10 +63,14 @@ public class Utils {
 	 * @return
 	 */
 	public static Map<String, String> getActionDes(String classFilePath){
+		
 		Map<String, String> actionDes = new HashMap<>();
+		File file = new File(classFilePath);
+//		if(file.getName().substring(file.getName().lastIndexOf(".") + 1) == "xls"||file.getName().substring(file.getName().lastIndexOf(".") + 1) == "xlsx") {
+		  
+//		}else {
     	BufferedReader reader = null;
 		try {
-	        File file = new File(classFilePath);
 	        if (!file.isDirectory()) {
 	        	reader = new BufferedReader(new FileReader(classFilePath));
 	        	String readLine = null;
@@ -100,7 +111,8 @@ public class Utils {
 //			    consolePrintln("Key=" + entry.getKey() + "Value =" + entry.getValue());  
 			  
 			} 
-		}		
+//		}		
+		}
 		
 		return actionDes;		
 	}
@@ -120,8 +132,8 @@ public class Utils {
 		return false;
 	}
 	
-	public static String getDescrib(String actionType){
-		if (actionType.equals("none")) {
+	public static String getDescrib(String actionType,String ...fileNames){
+		/*if (actionType.equals("none")) {
 			return "*没有操作*";
 		}
 		if (!isNumeric(actionType)) {
@@ -131,7 +143,65 @@ public class Utils {
 			return NewUserAction.actionDes.get(Integer.valueOf(actionType));			
 		}else {
 			return actionType;
+		}*/
+	
+		String path = "";
+		
+		for (String fileName : fileNames) {
+//			System.out.println(fileName.substring(fileName.lastIndexOf(".") + 1));
+			if(fileName == null) {
+				Main.showHelp();
+            	break;
+            }else if(fileName != null&&fileName.substring(fileName.lastIndexOf(".") + 1).equals("xls") ) {
+//            	System.out.println("走了这里");
+            	int i;
+            	path = fileName;
+                Sheet sheet;  
+                Workbook book;  
+                Cell cell1,cell2,cell3;  
+                try {   
+                    //hello.xls为要读取的excel文件名  
+                    book= Workbook.getWorkbook(new File(fileName));   
+//                    System.out.println("标题1："+book + "");   
+                    //获得第一个工作表对象(ecxel中sheet的编号从0开始,0,1,2,3,....)  
+                    sheet=book.getSheet(0);   
+                    //获取左上角的单元格  
+                    cell1=sheet.getCell(0,0);  
+                    
+//                    System.out.println("标题2："+sheet + "");   
+                    i=0;
+                    while(true)
+                    {  
+                        //获取每一行的单元格   
+                        cell1=sheet.getCell(0,i);//（列，行）  
+                        cell2=sheet.getCell(1,i);
+                        cell3 = sheet.getCell(2, i);
+//                        System.out.println("标题1："+cell1.getContents() + "");  
+//                        System.out.println("标题2："+cell2.getContents() + "");  
+//                        System.out.println("标题3："+cell3.getContents() + "");  
+                        if(actionType.equals(cell3.getContents())) {
+                        	return cell2.getContents();
+                        }
+                    
+//                        System.out.println("这是一个标题"+cell1.getContents());
+//                        System.out.println("这不是一个标题"+cell2.getContents());
+                        if(" ".equals(cell1.getContents())==true)    //如果读取的数据为空  
+                            break; 
+//                        actionDes.put(cell1.getContents(), cell2.getContents());
+                        i++;  
+                    }  
+                    book.close();   
+                }  
+                catch(Exception e)  { 
+                	System.out.println("标题0："+e + "");  
+                } 
+            	break;
+            }
+           
 		}
+		
+		return "";
+		
 	}
 	
 	public static boolean isNumeric(String str){ 
@@ -171,9 +241,9 @@ public class Utils {
 			Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
 			while(iterator.hasNext()){
 				Map.Entry<String, Integer> entry = iterator.next();
-				consolePrint("("+entry.getKey()+","+entry.getValue()+") ");
+//				consolePrint("("+entry.getKey()+","+entry.getValue()+") ");
 			}
-			consolePrint("\n");
+//			consolePrint("\n");
 		}
 		consolePrint("------------- end -------------------\n");
 	}
