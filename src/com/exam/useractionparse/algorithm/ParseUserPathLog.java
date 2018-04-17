@@ -59,7 +59,7 @@ public class ParseUserPathLog {
     
     private void init(){
     	//MAX_USER_ACTION_TYPE = //Utils.MaxNum +1; // 注意一定要在这里+1。为什么如果不加1，在parse的时候，第六次访问columns的第六列的时候columns.get(6).size()的大小始终为2或者为1？？？
-    	Utils.print("最大的ACTION TYPE值： "+MAX_USER_ACTION_TYPE+"\n");
+//    	Utils.print("最大的ACTION TYPE值： "+MAX_USER_ACTION_TYPE+"\n");
         
         /**
          * columns初始化后的内容：
@@ -78,10 +78,10 @@ public class ParseUserPathLog {
 //                Utils.consolePrint(row.size()+" ");
                 actionStaticsOfPerStep.add(row);        		
         	}catch (Exception e) {
-        		Utils.print(e.getMessage().toString());
+//        		Utils.print(e.getMessage().toString());
 			}
         }
-    	Utils.print("初始化完成。\n");
+//    	Utils.print("初始化完成。\n");
     }
 
     public void doParse(String ...fileNames) {    	
@@ -155,25 +155,23 @@ public class ParseUserPathLog {
 				}else {
 					// 打印出不在newUserAction里面定义的行为代号。
 		            if (Config.printInvalidValue) {
-		            	Utils.println("无效行: "+readLineStr+"\n");						
+					
 					}
 				}
             }
-            Utils.println("有效设备累计总数: "+actionPathList.size());
-            Utils.println("当前文件效设备累计: "+validPathCount);
             reader.close();
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             System.exit(1);
         } finally {
             if (reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e1) {
-                	e1.printStackTrace();
+//                	e1.printStackTrace();
                 }
             }
-            Utils.consolePrint("文件读取完成。\n");
+//            Utils.consolePrint("文件读取完成。\n");
         }
     }
 
@@ -446,9 +444,6 @@ public class ParseUserPathLog {
 					// 统计每一个用户在double键退出前操作数分布。
 					step_statics_double.put(count_before_back, Utils.getValueOfMap(step_statics_double, count_before_back) + 1);
 					amountOfDoubleBack++;
-//					if (count_before_back == 32) {
-//						Utils.print("44之前为32的操作序列： " + Utils.getArrayStr(keyArray)+"\n");
-//					}
 					break;
 				}else {
 					key_before_back = key;
@@ -539,27 +534,13 @@ public class ParseUserPathLog {
 
             File file = new File(filepath);
             if (file.isFile()) {
-                Utils.print("文件信息:\n");
-                Utils.print("文件路径=" + file.getAbsolutePath()+"\n");
-                Utils.print("文件名=" + file.getName()+"\n");
+//                Utils.print("文件信息:\n");
+//                Utils.print("文件路径=" + file.getAbsolutePath()+"\n");
+//                Utils.print("文件名=" + file.getName()+"\n");
                 readFileByLines(file.getPath());
 
             } else if (file.isDirectory()) {
-//                Utils.print("文件夹\n");
-//                File[] fz = file.listFiles();
-//                String[] filelist = file.list();
-//                for (int i = 0; i < filelist.length; i++) {
-//                    File readfile = new File(filepath + "\\" + filelist[i]);
-//                    if (!readfile.isDirectory()) {
-//                        Utils.print("path=" + readfile.getPath()+"\n");
-//                        Utils.print("absolutepath=" + readfile.getAbsolutePath());
-//                        Utils.print("name=" + readfile.getName());
-//
-//                        readFileByLines(readfile.getPath());
-//                    } else if (readfile.isDirectory()) {
-//                        readfile(filepath + "\\" + filelist[i]);
-//                    }
-//                }
+
             }
 
         } catch (Exception e) {
@@ -574,9 +555,6 @@ public class ParseUserPathLog {
         try {
             File file = new File(fileName);
             if (file.isFile()) {
-                Utils.print("文件信息:\n");
-                Utils.print("文件路径=" + file.getAbsolutePath()+"\n");
-                Utils.print("文件名=" + file.getName()+"\n");
                 readGeneralByLine(uninstalledAndroidIdList, file);
             } 
 
