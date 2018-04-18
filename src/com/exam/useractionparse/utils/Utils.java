@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 import com.exam.useractionparse.cfg.Config;
 import com.exam.useractionparse.cfg.ConstantValue;
 import com.exam.useractionparse.data.NewUserAction;
-import com.exam.useractionparse.main.Main;
+import com.exam.useractionparse.main.UserActionParser;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -149,7 +149,7 @@ public class Utils {
 		
 		for (String fileName : fileNames) {
 			if(fileName == null) {
-				Main.showHelp();
+				Utils.showHelp();
             	break;
             }else if(fileName != null&&fileName.substring(fileName.lastIndexOf(".") + 1).equals("xls") ) {
             	int i;
@@ -316,5 +316,40 @@ public class Utils {
 			return 0;
 		}
     }
+	
+	public static void showHelp(){
+		System.err.println("Error messages:pls input valid parameters.\n");
+		consolePrint("HELP:\n解析从移动端上传的用户行为日志。\n"
+				+ "输入：1）行为集合日志（可能有多个）；2）行为（描述）和对应值映射表（EXCEL表格）。\n"
+				+ "输出：解析结果。\n"
+				+ "Usages:\n"
+				+ "java -jar UserActionParser -l(log file) \"行为日志文件1完整路径\" \"行为日志文件2完整路径\"  -e(excel file) \"行为（描述）和其值映射表完整路径\"\n"
+				+ "E.g:\n"
+				+ "\t-l \"F:\\user_path\\user_path_s2.log.2017-05-02(1)\" \"F:\\user_path\\user_path_s2.log.2017-05-02(2)\" -e \"F:\\user_path\\user_path.log.2017-05-02.xls\"\n"
+				+ "\t-unistall \"F:\\user_path\\user_path_s2.log.2017-05-02\" \"F:\\user_path\\user_path.log.2017-05-02\"\n"
+				+ "附注：行为日志文件可能会存在多个（因为之前某一天的日志都是分做两个文件的）。");
+		System.exit(0);		
+	}
+	
+	public static void openLogFile() {
+		try {
+			Utils.resultFileHandle.flush();
+			Utils.resultFileHandle.close();
+			
+			Runtime runtime = Runtime.getRuntime();
+			runtime.exec("cmd /c start notepad++ " + Utils.resultFileName.toString());
+		}catch (Exception e) {
+			try {
+				Utils.resultFileHandle.flush();
+				Utils.resultFileHandle.close();
+				
+				Runtime runtime = Runtime.getRuntime();
+				runtime.exec("cmd /c start notepad " + Utils.resultFileName.toString());				
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		} 
+		
+	}
 
 }
