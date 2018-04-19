@@ -18,25 +18,24 @@ import java.util.Map.Entry;
 import javax.rmi.CORBA.Util;
 
 import com.exam.useractionparse.cfg.Config;
+import com.exam.useractionparse.cfg.ConstantValue;
 import com.exam.useractionparse.data.NewUserAction;
+import com.exam.useractionparse.utils.Log;
+import com.exam.useractionparse.utils.NumberUtils;
 import com.exam.useractionparse.utils.ParseUtils;
-import com.exam.useractionparse.utils.Utils;
+import com.exam.useractionparse.utils.DesUtils;
 
 import java.util.Set;
 
-public class ParseUserPathLog {
-
-	private static final int MAX_USER_ACTION_STEP = 200;
-	private static final int MAX_USER_ACTION_TYPE = 100;
-	private static final String EXIT_TAG = "none";
-	private static final double THRESHOLD = 0.01;
+public class ActionPathLogParser {
 	private static final String HOME_CLICK_KEY = "" + NewUserAction.ACTION_HOME_KEY_PRESS;
 	private static final String DOUBLE_CLICK_BACK_KEY = "" + NewUserAction.ACTION_DOUBLE_BACK;
 
 	// 从文件中解析得到的字符串数组队列。
 	private ArrayList<String[]> mArrayListctionPathList = new ArrayList<>();
 	// 保存统计信息。
-	private ArrayList<Map<String, Integer>> mArrayListpspsctionStaticsOfPerStep = new ArrayList<>(MAX_USER_ACTION_STEP);
+	private ArrayList<Map<String, Integer>> mArrayListpspsctionStaticsOfPerStep = new ArrayList<>(
+			Config.MAX_USER_ACTION_STEP);
 	// 统计HOME键退出前，操作分布比例。
 	private Map<String, Integer> mHome_exit_static = new HashMap<String, Integer>();
 	// 统计双击退出前，操作分布比例。
@@ -48,38 +47,38 @@ public class ParseUserPathLog {
 	// 拉通统计一天以内的操作数分布。
 	private Map<Integer, Integer> mStep_statics = new HashMap<>();
 	// 最后一步类型统计。
-	private Map<String, Integer> last_action_statics = new HashMap<>();
+	private Map<String, Integer> mLast_action_statics = new HashMap<>();
 	// 统计2步操作后退出后，前一个操作的分布比例。
-	private Map<String, Integer> action_exit_2_step_statics = new HashMap<>();
+	private Map<String, Integer> mAction_exit_2_step_statics = new HashMap<>();
 	// 卸载用户的android id
-	private ArrayList<String> uninstalledAndroidIdList = new ArrayList<>();
-	// 检测两个文件重复的android id列表。
-	private ArrayList<String> android_list_distinct1 = new ArrayList<>();
-	private ArrayList<String> android_list_distinct2 = new ArrayList<>();
+	private ArrayList<String> mUninstalledAndroidIdList = new ArrayList<>();
+	// 检测两个文件重复的android id列表（多个文件同时分析，）。
+	private ArrayList<String> mAndroid_list_distinct1 = new ArrayList<>();
+	private ArrayList<String> mAndroid_list_distinct2 = new ArrayList<>();
 
 	private void init() {
 		// MAX_USER_ACTION_TYPE = //Utils.MaxNum +1; //
 		// 注意一定要在这里+1。为什么如果不加1，在parse的时候，第六次访问columns的第六列的时候columns.get(6).size()的大小始终为2或者为1？？？
-		Utils.print("最大的ACTION TYPE值： " + MAX_USER_ACTION_TYPE + "\n");
+		Log.print("最大的ACTION TYPE值： " + Config.MAX_USER_ACTION_TYPE + "\n");
 
 		/**
 		 * columns初始化后的内容： 0 <"1",0> <"2",0> <"3",0> ... <"43",0> 1 <"1",0>
 		 * <"2",0> <"3",0> ... <"43",0> 2 <"1",0> <"2",0> <"3",0> ... <"43",0>
 		 * ... 99 <"1",0> <"2",0> <"3",0> ... <"43",0>
 		 */
-		for (int i = 0; i < MAX_USER_ACTION_STEP; i++) {
+		for (int i = 0; i < Config.MAX_USER_ACTION_STEP; i++) {
 			try {
 				Map<String, Integer> row = new HashMap<>();
-				for (int j = 0; j < MAX_USER_ACTION_TYPE; j++) {
+				for (int j = 0; j < Config.MAX_USER_ACTION_TYPE; j++) {
 					row.put(String.valueOf(j), 0);
 				}
 				// Utils.consolePrint(row.size()+" ");
 				mArrayListpspsctionStaticsOfPerStep.add(row);
 			} catch (Exception e) {
-				Utils.print(e.getMessage().toString());
+				Log.print(e.getMessage().toString());
 			}
 		}
-		Utils.print("初始化完成。\n");
+		Log.print("初始化完成。\n");
 	}
 
 	public void doParse(List<String> fileNames) {
@@ -95,20 +94,19 @@ public class ParseUserPathLog {
 
 		// Utils.printTable(columns);
 		if (Config.printColumn) {
-			Utils.printTableListArray(mArrayListctionPathList);
+			Log.printTableListArray(mArrayListctionPathList);
 		}
 
-		Utils.println("generate data");
+		Log.println("generate data");
 
 		generateColumns();
 
 		// Utils.printTable(columns);
 
-		Utils.println("do statics");
+		Log.println("do statics");
 
 		doStatics(fileNames);
 		exit_Statics(fileNames);
-
 	}
 
 	/**
@@ -126,7 +124,7 @@ public class ParseUserPathLog {
 			validPathCount = 0;
 
 			if (Config.printRedundancy) {
-				android_list_distinct1.clear();
+				mAndroid_list_distinct1.clear();
 			}
 
 		}
@@ -143,20 +141,20 @@ public class ParseUserPathLog {
 
 					if (Config.printRedundancy) {
 						String androidid = ParseUtils.getAndroidIdStr(readLineStr);
-						if (android_list_distinct1.contains(androidid)) {
-							Utils.println("重复android id: " + androidid);
+						if (mAndroid_list_distinct1.contains(androidid)) {
+							Log.println("重复android id: " + androidid);
 						}
-						android_list_distinct1.add(androidid);
+						mAndroid_list_distinct1.add(androidid);
 					}
 				} else {
 					// 打印出不在newUserAction里面定义的行为代号。
 					if (Config.printInvalidValue) {
-						Utils.println("无效行: " + readLineStr + "\n");
+						Log.println("无效行: " + readLineStr + "\n");
 					}
 				}
 			}
-			Utils.println("有效设备累计总数: " + mArrayListctionPathList.size());
-			Utils.println("当前文件效设备累计: " + validPathCount);
+			Log.println("有效设备累计总数: " + mArrayListctionPathList.size());
+			Log.println("当前文件效设备累计: " + validPathCount);
 			reader.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -169,7 +167,7 @@ public class ParseUserPathLog {
 					e1.printStackTrace();
 				}
 			}
-			Utils.consolePrint("文件读取完成。\n");
+			Log.consolePrint("文件读取完成。\n");
 		}
 	}
 
@@ -185,7 +183,7 @@ public class ParseUserPathLog {
 	 * 疑问：none里面的值是如何确定的？这么样的统计意义何在？？？因为总数始终都是不变的，其值等于path里面的行数，即用户总数.
 	 */
 	private void doStatics(List<String> fileNames) {
-		Utils.consolePrint("开始计算比例：\n");
+		Log.consolePrint("开始计算比例：\n");
 		String deString = "";
 		int exitTotalBefore = 0;
 		int exitTotalBeforeTemp = 0;
@@ -218,7 +216,7 @@ public class ParseUserPathLog {
 				Map.Entry<String, Integer> me = it1.next();
 				Integer value = me.getValue();
 				sum += (int) value;
-				if (me.getKey().equals(EXIT_TAG)) {
+				if (me.getKey().equals(Config.EXIT_TAG)) {
 					exitTotalBeforeTemp = me.getValue();
 				}
 			} // end while
@@ -242,8 +240,8 @@ public class ParseUserPathLog {
 			 * 计算基于上一步操作退出了多少比例的用户：
 			 */
 			sb.append("步：" + i);
-			sb.append(" remain：" + sum + " " + " 上一步退出：" + (Utils.DECIMAL_FORMAT_2.format(exitBasedOnLastPercent * 100))
-					+ "%").append("(");
+			sb.append(" remain：" + sum + " " + " 上一步退出："
+					+ (ConstantValue.DECIMAL_FORMAT_2.format(exitBasedOnLastPercent * 100)) + "%").append("(");
 			lastSum = sum;
 
 			// 每个行为的比例计算。
@@ -252,32 +250,33 @@ public class ParseUserPathLog {
 				Map.Entry<String, Integer> me = it2.next();
 				Integer value = me.getValue();
 				String stringKey = me.getKey();
-				if (stringKey.equals(EXIT_TAG)) {
+				if (stringKey.equals(Config.EXIT_TAG)) {
 					continue;
 				}
 				if (value > 0) {
-					deString = Utils.getDescrib(stringKey);
+					deString = DesUtils.getDescrib(stringKey);
 					if (total > 0) {
 						percentOfPerActionAction = value / total;
 					} else {
 						percentOfPerActionAction = 0.0;
 					}
-					if (percentOfPerActionAction < THRESHOLD) {
+					if (percentOfPerActionAction < Config.THRESHOLD) {
 						theOthers += value;
 						continue;
 					}
-					sb.append(" [" + deString + ", " + (Utils.DECIMAL_FORMAT_2.format(percentOfPerActionAction * 100))
-							+ "%]");
+					sb.append(" [" + deString + ", "
+							+ (ConstantValue.DECIMAL_FORMAT_2.format(percentOfPerActionAction * 100)) + "%]");
 				}
 			} // end while
 			if (theOthers > 0 && total > 0) {
 				thOthersPercent = theOthers / total;
-				sb.append(" [" + theOtherStr + ", " + (Utils.DECIMAL_FORMAT_2.format(thOthersPercent * 100)) + "%]");
+				sb.append(" [" + theOtherStr + ", " + (ConstantValue.DECIMAL_FORMAT_2.format(thOthersPercent * 100))
+						+ "%]");
 			}
 
 			sb.append(")\n");
 			if (Config.enablePathParse) {
-				Utils.print(sb.toString());
+				Log.print(sb.toString());
 			}
 			exitTotalBefore = exitTotalBeforeTemp;
 			/**
@@ -344,7 +343,7 @@ public class ParseUserPathLog {
 	 * <"37",0> <"EXITTAG",0>
 	 */
 	private void generateColumns() {
-		Utils.println("开始解析...");
+		Log.println("开始解析...");
 		int maxLength = 0;
 		String[] maxStrArray = new String[0];
 		for (String[] arrPath : mArrayListctionPathList) {
@@ -352,7 +351,7 @@ public class ParseUserPathLog {
 				maxLength = arrPath.length;
 				maxStrArray = arrPath;
 			}
-			for (int j = 0; j < MAX_USER_ACTION_STEP; j++) {
+			for (int j = 0; j < Config.MAX_USER_ACTION_STEP; j++) {
 				Map<String, Integer> map = mArrayListpspsctionStaticsOfPerStep.get(j);
 				if (j < arrPath.length) {
 					String type = arrPath[j];
@@ -365,20 +364,20 @@ public class ParseUserPathLog {
 						mArrayListpspsctionStaticsOfPerStep.set(j, newMap);
 					}
 				} else {
-					if (map.containsKey(EXIT_TAG)) {
-						Integer num = map.get(EXIT_TAG);
-						map.put(EXIT_TAG, num + 1);
+					if (map.containsKey(Config.EXIT_TAG)) {
+						Integer num = map.get(Config.EXIT_TAG);
+						map.put(Config.EXIT_TAG, num + 1);
 					} else {
-						map.put(EXIT_TAG, 1);
+						map.put(Config.EXIT_TAG, 1);
 					}
 				}
 
 			}
 		}
-		Utils.consolePrint("统计表：");
-		Utils.printTable(mArrayListpspsctionStaticsOfPerStep);
-		Utils.print("最长操作 = " + maxLength + " 最长操作序列: \n");
-		Utils.printStrArray(maxStrArray);
+		Log.consolePrint("统计表：");
+		Log.printTable(mArrayListpspsctionStaticsOfPerStep);
+		Log.print("最长操作 = " + maxLength + " 最长操作序列: \n");
+		Log.printStrArray(maxStrArray);
 	}
 
 	@SuppressWarnings({ "unchecked" })
@@ -388,19 +387,19 @@ public class ParseUserPathLog {
 		double amountOfHomeBack = 0;
 		double amountOfDoubleBack = 0;
 		double deviceAmount = mArrayListctionPathList.size();
-//		Utils.consolePrint(mArrayListctionPathList);
+		// Utils.consolePrint(mArrayListctionPathList);
 		for (String[] actionPath : mArrayListctionPathList) {
 			count_before_back = 0;
 			key_before_back = "none";
 
-			mStep_statics.put(actionPath.length, Utils.getValueOfMap(mStep_statics, actionPath.length) + 1);
-			last_action_statics.put(actionPath[actionPath.length - 1],
-					Utils.getValueOfMap(last_action_statics, actionPath[actionPath.length - 1]) + 1);
+			mStep_statics.put(actionPath.length, DesUtils.getValueOfMap(mStep_statics, actionPath.length) + 1);
+			mLast_action_statics.put(actionPath[actionPath.length - 1],
+					DesUtils.getValueOfMap(mLast_action_statics, actionPath[actionPath.length - 1]) + 1);
 
 			if (actionPath.length < 3) {
 				if (actionPath.length == 2) {
-					action_exit_2_step_statics.put(actionPath[0],
-							Utils.getValueOfMap(action_exit_2_step_statics, actionPath[0]) + 1);
+					mAction_exit_2_step_statics.put(actionPath[0],
+							DesUtils.getValueOfMap(mAction_exit_2_step_statics, actionPath[0]) + 1);
 				} else {
 					// action_exit_2_step_statics.put(actionPath[0],
 					// Utils.getValueOfMap(last_action_statics, actionPath[0]) +
@@ -411,20 +410,21 @@ public class ParseUserPathLog {
 			for (String key : actionPath) {
 				if (key.equals(HOME_CLICK_KEY)) {
 					// 拉通统计所有home键退出前的操作分布。
-					mHome_exit_static.put(key_before_back, Utils.getValueOfMap(mHome_exit_static, key_before_back) + 1);
+					mHome_exit_static.put(key_before_back,
+							DesUtils.getValueOfMap(mHome_exit_static, key_before_back) + 1);
 					// 统计每一个用户在home键退出前操作步数。
 					mStep_statics_home.put(count_before_back,
-							Utils.getValueOfMap(mStep_statics_home, count_before_back) + 1);
+							DesUtils.getValueOfMap(mStep_statics_home, count_before_back) + 1);
 					amountOfHomeBack++;
 					break;
 				} else if (key.equals(DOUBLE_CLICK_BACK_KEY)) {
 					// Utils.print(Utils.getArrayStr(keyArray)+"\n");
 					// 拉通统计所有double键退出前的操作分布。
 					mDouble_click_statics.put(key_before_back,
-							Utils.getValueOfMap(mDouble_click_statics, key_before_back) + 1);
+							DesUtils.getValueOfMap(mDouble_click_statics, key_before_back) + 1);
 					// 统计每一个用户在double键退出前操作数分布。
 					mStep_statics_double.put(count_before_back,
-							Utils.getValueOfMap(mStep_statics_double, count_before_back) + 1);
+							DesUtils.getValueOfMap(mStep_statics_double, count_before_back) + 1);
 					amountOfDoubleBack++;
 					// if (count_before_back == 32) {
 					// Utils.print("44之前为32的操作序列： " +
@@ -438,91 +438,91 @@ public class ParseUserPathLog {
 			}
 		}
 
-		Utils.println("................................");
-		Utils.println("HOME键退出前，操作分布：总数" + amountOfHomeBack);
-		Utils.println("................................");
+		Log.println("................................");
+		Log.println("HOME键退出前，操作分布：总数" + amountOfHomeBack);
+		Log.println("................................");
 		List<Map.Entry<String, Integer>> home_exit_static_list = new ArrayList<Map.Entry<String, Integer>>(
 				mHome_exit_static.entrySet());
-		Collections.sort(home_exit_static_list, Utils.strKeyComparator);
+		Collections.sort(home_exit_static_list, NumberUtils.strKeyComparator);
 		Iterator<Entry<String, Integer>> iterator = mHome_exit_static.entrySet().iterator();
-		Utils.println(Utils.format("%-20s%5s", "操作", "比例"));
+		Log.println(Log.format("%-20s%5s", "操作", "比例"));
 		for (Map.Entry<String, Integer> entry : home_exit_static_list) {
-			Utils.println(Utils.format("%-20s%5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey()),
-					Utils.getFormat3Str(entry.getValue() / amountOfHomeBack)));
+			Log.println(Log.format("%-20s%5s", entry.getKey() + "-" + DesUtils.getDescrib(entry.getKey()),
+					Log.getFormat3Str(entry.getValue() / amountOfHomeBack)));
 		}
 		;
 
-		Utils.println("................................");
-		Utils.println("双击退出前，操作分布：总数" + amountOfDoubleBack);
-		Utils.println("................................");
+		Log.println("................................");
+		Log.println("双击退出前，操作分布：总数" + amountOfDoubleBack);
+		Log.println("................................");
 		List<Map.Entry<String, Integer>> double_click_statics_list = new ArrayList<Map.Entry<String, Integer>>(
 				mDouble_click_statics.entrySet());
-		Collections.sort(double_click_statics_list, Utils.strKeyComparator);
-		Utils.println(Utils.format("%-20s%5s", "操作", "比例"));
+		Collections.sort(double_click_statics_list, NumberUtils.strKeyComparator);
+		Log.println(Log.format("%-20s%5s", "操作", "比例"));
 		for (Map.Entry<String, Integer> entry : double_click_statics_list) {
-			Utils.println(Utils.format("%-20s%5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey()),
-					Utils.getFormat3Str(entry.getValue() / amountOfDoubleBack)));
+			Log.println(Log.format("%-20s%5s", entry.getKey() + "-" + DesUtils.getDescrib(entry.getKey()),
+					Log.getFormat3Str(entry.getValue() / amountOfDoubleBack)));
 		}
 
-		Utils.println("................................");
-		Utils.println("HOME键退出前，操作数分布：总数:" + amountOfHomeBack);
-		Utils.println("................................");
+		Log.println("................................");
+		Log.println("HOME键退出前，操作数分布：总数:" + amountOfHomeBack);
+		Log.println("................................");
 		List<Map.Entry<Integer, Integer>> step_statics_home_list = new ArrayList<Map.Entry<Integer, Integer>>(
 				mStep_statics_home.entrySet());
-		Collections.sort(step_statics_home_list, Utils.intKeyComparator);
-		Utils.println(Utils.format("%-10s%-5s%5s", "操作", "数量", "比例"));
+		Collections.sort(step_statics_home_list, NumberUtils.intKeyComparator);
+		Log.println(Log.format("%-10s%-5s%5s", "操作", "数量", "比例"));
 		for (Map.Entry<Integer, Integer> entry : step_statics_home_list) {
-			Utils.println(Utils.format("%-10s%-5s%5s", entry.getKey(), entry.getValue(),
-					Utils.getFormat3Str(entry.getValue() / amountOfHomeBack)));
+			Log.println(Log.format("%-10s%-5s%5s", entry.getKey(), entry.getValue(),
+					Log.getFormat3Str(entry.getValue() / amountOfHomeBack)));
 		}
 
-		Utils.println("................................");
-		Utils.println("双击退出前，操作数分布：总数" + amountOfDoubleBack);
-		Utils.println("................................");
+		Log.println("................................");
+		Log.println("双击退出前，操作数分布：总数" + amountOfDoubleBack);
+		Log.println("................................");
 		List<Map.Entry<Integer, Integer>> step_statics_double_list = new ArrayList<Map.Entry<Integer, Integer>>(
 				mStep_statics_double.entrySet());
-		Collections.sort(step_statics_double_list, Utils.intKeyComparator);
-		Utils.println(Utils.format("%-5s%-10s%5s", "操作步数", "数量", "比例"));
+		Collections.sort(step_statics_double_list, NumberUtils.intKeyComparator);
+		Log.println(Log.format("%-5s%-10s%5s", "操作步数", "数量", "比例"));
 		for (Map.Entry<Integer, Integer> entry : step_statics_double_list) {
-			Utils.println(Utils.format("%-5s%-10s%10s", entry.getKey(), entry.getValue(),
-					Utils.getFormat3Str(entry.getValue() / amountOfDoubleBack)));
+			Log.println(Log.format("%-5s%-10s%10s", entry.getKey(), entry.getValue(),
+					Log.getFormat3Str(entry.getValue() / amountOfDoubleBack)));
 		}
 
-		Utils.println(".................................");
-		Utils.println("操作步数分布：总数： " + deviceAmount);
-		Utils.println("................................");
+		Log.println(".................................");
+		Log.println("操作步数分布：总数： " + deviceAmount);
+		Log.println("................................");
 		List<Map.Entry<Integer, Integer>> step_statics_list = new ArrayList<Map.Entry<Integer, Integer>>(
 				mStep_statics.entrySet());
-		Collections.sort(step_statics_list, Utils.intKeyComparator);
-		Utils.println(Utils.format("%-10s%-10s%5s", "操作步数", "数量", "比例"));
+		Collections.sort(step_statics_list, NumberUtils.intKeyComparator);
+		Log.println(Log.format("%-10s%-10s%5s", "操作步数", "数量", "比例"));
 		for (Entry<Integer, Integer> entry : step_statics_list) {
-			Utils.println(Utils.format("%-10s%-10s%-5s", entry.getKey(), entry.getValue(),
-					Utils.getFormat2Str(entry.getValue() / deviceAmount)));
+			Log.println(Log.format("%-10s%-10s%-5s", entry.getKey(), entry.getValue(),
+					Log.getFormat2Str(entry.getValue() / deviceAmount)));
 		}
 
-		Utils.println(".................................");
-		Utils.println("最后一步操作分布比例：总数： " + deviceAmount);
-		Utils.println("................................");
+		Log.println(".................................");
+		Log.println("最后一步操作分布比例：总数： " + deviceAmount);
+		Log.println("................................");
 		List<Map.Entry<String, Integer>> last_action_statics_list = new ArrayList<Map.Entry<String, Integer>>(
-				last_action_statics.entrySet());
-		Collections.sort(last_action_statics_list, Utils.strKeyComparator);
-		Utils.println(Utils.format("%-20s%5s", "操作", "比例"));
+				mLast_action_statics.entrySet());
+		Collections.sort(last_action_statics_list, NumberUtils.strKeyComparator);
+		Log.println(Log.format("%-20s%5s", "操作", "比例"));
 		for (Entry<String, Integer> entry : last_action_statics_list) {
-			Utils.println(Utils.format("%-20s%-5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey()),
-					Utils.getFormat2Str(entry.getValue() / deviceAmount)));
+			Log.println(Log.format("%-20s%-5s", entry.getKey() + "-" + DesUtils.getDescrib(entry.getKey()),
+					Log.getFormat2Str(entry.getValue() / deviceAmount)));
 		}
 
 		double action_2_step = mStep_statics.get(2);
-		Utils.println(".................................");
-		Utils.println("在2步操作退出的情况下，第一个操作分布比例：总数： " + action_2_step);
-		Utils.println("................................");
+		Log.println(".................................");
+		Log.println("在2步操作退出的情况下，第一个操作分布比例：总数： " + action_2_step);
+		Log.println("................................");
 		List<Map.Entry<String, Integer>> action_exit_2_step_statics_list = new ArrayList<Map.Entry<String, Integer>>(
-				action_exit_2_step_statics.entrySet());
-		Collections.sort(action_exit_2_step_statics_list, Utils.strKeyComparator);
-		Utils.println(Utils.format("%-20s%5s", "操作", "比例"));
+				mAction_exit_2_step_statics.entrySet());
+		Collections.sort(action_exit_2_step_statics_list, NumberUtils.strKeyComparator);
+		Log.println(Log.format("%-20s%5s", "操作", "比例"));
 		for (Entry<String, Integer> entry : action_exit_2_step_statics_list) {
-			Utils.println(Utils.format("%-20s%-5s", entry.getKey() + "-" + Utils.getDescrib(entry.getKey()),
-					Utils.getFormat2Str(entry.getValue() / action_2_step)));
+			Log.println(Log.format("%-20s%-5s", entry.getKey() + "-" + DesUtils.getDescrib(entry.getKey()),
+					Log.getFormat2Str(entry.getValue() / action_2_step)));
 		}
 
 	}
@@ -532,9 +532,9 @@ public class ParseUserPathLog {
 
 			File file = new File(filepath);
 			if (file.isFile()) {
-				Utils.print("文件信息:\n");
-				Utils.print("\t文件路径=" + file.getAbsolutePath() + "\n");
-				Utils.print("\t文件名=" + file.getName() + "\n");
+				Log.print("文件信息:\n");
+				Log.print("\t文件路径=" + file.getAbsolutePath() + "\n");
+				Log.print("\t文件名=" + file.getName() + "\n");
 				readFileByLines(file.getPath());
 
 			} else if (file.isDirectory()) {
@@ -557,7 +557,7 @@ public class ParseUserPathLog {
 
 		} catch (Exception e) {
 			if (Config.printDebugMsg) {
-				Utils.println("readfile()   Exception:" + e.getMessage());
+				Log.println("readfile()   Exception:" + e.getMessage());
 			}
 		}
 		return true;
@@ -567,14 +567,14 @@ public class ParseUserPathLog {
 		try {
 			File file = new File(fileName);
 			if (file.isFile()) {
-				Utils.print("文件信息:\n");
-				Utils.print("文件路径=" + file.getAbsolutePath() + "\n");
-				Utils.print("文件名=" + file.getName() + "\n");
-				readGeneralByLine(uninstalledAndroidIdList, file);
+				Log.print("文件信息:\n");
+				Log.print("文件路径=" + file.getAbsolutePath() + "\n");
+				Log.print("文件名=" + file.getName() + "\n");
+				readGeneralByLine(mUninstalledAndroidIdList, file);
 			}
 
 		} catch (Exception e) {
-			Utils.print("readfile()   Exception:" + e.getMessage());
+			Log.print("readfile()   Exception:" + e.getMessage());
 		}
 	}
 
@@ -586,7 +586,7 @@ public class ParseUserPathLog {
 			while ((readLineStr = reader.readLine()) != null) {
 				targetList.add(readLineStr);
 			}
-			Utils.print("卸载总数: " + targetList.size() + "\n");
+			Log.print("卸载总数: " + targetList.size() + "\n");
 			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -599,7 +599,7 @@ public class ParseUserPathLog {
 					e1.printStackTrace();
 				}
 			}
-			Utils.print("文件读取完成。\n");
+			Log.print("文件读取完成。\n");
 		}
 	}
 }
