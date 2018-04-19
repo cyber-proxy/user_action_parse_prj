@@ -1,34 +1,20 @@
 package com.exam.useractionparse.utils;
 
-import java.awt.print.Printable;
-
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 import com.exam.useractionparse.cfg.Config;
+import com.exam.useractionparse.cfg.ConstantValue;
 import com.exam.useractionparse.data.NewUserAction;
 import com.exam.useractionparse.data.UserActionDes;
-import com.exam.useractionparse.main.UserActionParser;
-
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
 
 public class DesUtils {
-
-	private final static String PREFIX = "int";
-	private final static String ASIGN = "=";
-	private final static String delimiter = ";";
-	public static int MaxNum = 73;
-
 	public static StringBuilder resultFileName = new StringBuilder();
 	public static FileWriter resultFileHandle = null;
 
@@ -55,16 +41,16 @@ public class DesUtils {
 				while ((readLine = reader.readLine()) != null) {
 					// consolePrint(readLine);
 					readLine = readLine.replaceAll(" ", "");
-					if (readLine.contains(PREFIX)) {
-						String intStatement = readLine.split(PREFIX)[1];
-						String name = intStatement.split(ASIGN)[0];
+					if (readLine.contains(ConstantValue.PREFIX)) {
+						String intStatement = readLine.split(ConstantValue.PREFIX)[1];
+						String name = intStatement.split(ConstantValue.ASIGN)[0];
 						name = name.toLowerCase();
-						String valueInt = intStatement.split(ASIGN)[1];
-						valueInt = valueInt.split(delimiter)[0];
+						String valueInt = intStatement.split(ConstantValue.ASIGN)[1];
+						valueInt = valueInt.split(ConstantValue.delimiter)[0];
 						if (NumberUtils.isNumeric2(valueInt)) {
 							actionDes.put(valueInt, name);
-							if (Integer.valueOf(valueInt) > MaxNum) {
-								MaxNum = Integer.valueOf(valueInt);
+							if (Integer.valueOf(valueInt) > ConstantValue.MaxNum) {
+								ConstantValue.MaxNum = Integer.valueOf(valueInt);
 							}
 						}
 					}

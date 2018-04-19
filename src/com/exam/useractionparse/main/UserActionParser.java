@@ -7,8 +7,6 @@ import com.exam.useractionparse.algorithm.ActionPathLogParser;
 import com.exam.useractionparse.data.UserActionDes;
 import com.exam.useractionparse.utils.DesUtils;
 
-import antlr.StringUtils;
-
 public class UserActionParser {
 	private static ArrayList<String> sLogList = new ArrayList<>();
 
