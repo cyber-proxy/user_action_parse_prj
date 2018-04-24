@@ -1,0 +1,352 @@
+最大的ACTION TYPE值： 100
+初始化完成。
+文件信息:
+	文件路径=F:\Eclipse\workspace\ParseUserActionPathLog\user_path.log (2).2017-04-02
+	文件名=user_path.log (2).2017-04-02
+有效设备累计总数: 48133
+当前文件效设备累计: 48133
+文件信息:
+	文件路径=F:\Eclipse\workspace\ParseUserActionPathLog\us.log.2017-09-10
+	文件名=us.log.2017-09-10
+有效设备累计总数: 54034
+当前文件效设备累计: 5901
+generate data
+开始解析...
+最长操作 = 345 最长操作序列: 
+do statics
+步：0 remain：2  上一步退出：0.00%( [点击广告, 100.00%])
+步：1 remain：1  上一步退出：0.00%( [点击HOME键盘, 100.00%])
+................................
+HOME键退出前，操作分布：总数2190.0
+................................
+操作                     比例
+none-*没有操作*         25.023%
+3-点击广告              11.050%
+8-点击FULL扫描          9.178%
+4-进入加速页面            8.995%
+2-点击插屏广告            8.813%
+18-点击即时网络           8.402%
+1-显示插屏广告            6.712%
+26-清理中退出            3.333%
+31-退出带功能弹窗          3.105%
+6-进入安全页面            2.740%
+22-显示充电页面           2.100%
+25-加速中退出            1.918%
+47-47               1.826%
+15-点击清理             1.096%
+23-显示实时防护页面         1.050%
+9-点击隐私清理            0.776%
+14-点击即时耗电           0.639%
+27-降温中退出            0.457%
+19-点击即时CPU          0.365%
+5-进入清理主页面           0.365%
+11-点击加速             0.320%
+13-点击降温             0.320%
+12-点击省电             0.274%
+24-安全扫描中退出          0.228%
+10-进入APP LOCKER     0.228%
+48-48               0.183%
+28-省电中退出            0.091%
+55-55               0.091%
+17-强力清理页面           0.091%
+49-49               0.046%
+30-PowerBoost退出     0.046%
+75-75               0.046%
+54-54               0.046%
+16-系统缓存页面           0.046%
+................................
+双击退出前，操作分布：总数926.0
+................................
+操作                     比例
+26-清理中退出            41.145%
+25-加速中退出            17.171%
+3-点击广告              16.631%
+18-点击即时网络           5.616%
+14-点击即时耗电           4.320%
+22-显示充电页面           1.836%
+6-进入安全页面            1.836%
+9-点击隐私清理            1.620%
+2-点击插屏广告            1.296%
+5-进入清理主页面           0.972%
+19-点击即时CPU          0.864%
+8-点击FULL扫描          0.864%
+47-47               0.756%
+27-降温中退出            0.648%
+23-显示实时防护页面         0.540%
+24-安全扫描中退出          0.540%
+12-点击省电             0.540%
+13-点击降温             0.540%
+16-系统缓存页面           0.432%
+4-进入加速页面            0.432%
+30-PowerBoost退出     0.324%
+48-48               0.216%
+49-49               0.216%
+31-退出带功能弹窗          0.216%
+43-43               0.216%
+44-44               0.108%
+59-59               0.108%
+................................
+HOME键退出前，操作数分布：总数:2190.0
+................................
+操作        数量      比例
+0         548  25.023%
+1         340  15.525%
+2         223  10.183%
+4         181  8.265%
+3         173  7.900%
+5         129  5.890%
+6         73   3.333%
+7         71   3.242%
+13        57   2.603%
+8         56   2.557%
+9         54   2.466%
+10        52   2.374%
+12        48   2.192%
+11        41   1.872%
+14        26   1.187%
+15        24   1.096%
+16        23   1.050%
+17        18   0.822%
+19        15   0.685%
+18        12   0.548%
+20        9    0.411%
+21        5    0.228%
+23        3    0.137%
+24        2    0.091%
+25        2    0.091%
+22        1    0.046%
+27        1    0.046%
+30        1    0.046%
+31        1    0.046%
+41        1    0.046%
+................................
+双击退出前，操作数分布：总数926.0
+................................
+操作步数 数量           比例
+9    127          13.715%
+7    96           10.367%
+13   88            9.503%
+14   83            8.963%
+10   77            8.315%
+15   71            7.667%
+8    59            6.371%
+11   48            5.184%
+6    46            4.968%
+5    37            3.996%
+2    31            3.348%
+12   31            3.348%
+17   26            2.808%
+16   21            2.268%
+3    19            2.052%
+18   17            1.836%
+4    11            1.188%
+19   6             0.648%
+21   6             0.648%
+27   4             0.432%
+20   3             0.324%
+25   3             0.324%
+26   3             0.324%
+1    2             0.216%
+24   2             0.216%
+30   2             0.216%
+22   1             0.108%
+28   1             0.108%
+29   1             0.108%
+34   1             0.108%
+35   1             0.108%
+38   1             0.108%
+46   1             0.108%
+.................................
+操作步数分布：总数： 54034.0
+................................
+操作步数      数量           比例
+4         6598      12.21%
+3         6012      11.13%
+7         5245      9.71%
+2         4415      8.17%
+5         4168      7.71%
+1         4127      7.64%
+9         3618      6.70%
+6         3275      6.06%
+10        3247      6.01%
+8         3188      5.90%
+11        2276      4.21%
+12        1810      3.35%
+13        1398      2.59%
+14        1154      2.14%
+15        954       1.77%
+16        709       1.31%
+17        463       0.86%
+18        325       0.60%
+19        265       0.49%
+20        193       0.36%
+21        134       0.25%
+22        99        0.18%
+23        80        0.15%
+24        51        0.09%
+25        49        0.09%
+26        35        0.06%
+27        23        0.04%
+29        19        0.04%
+28        18        0.03%
+32        7         0.01%
+36        7         0.01%
+30        6         0.01%
+31        6         0.01%
+35        6         0.01%
+33        5         0.01%
+34        5         0.01%
+40        4         0.01%
+37        3         0.01%
+38        3         0.01%
+39        3         0.01%
+41        3         0.01%
+45        3         0.01%
+43        2         0.00%
+49        2         0.00%
+50        2         0.00%
+65        2         0.00%
+98        2         0.00%
+129       1         0.00%
+132       1         0.00%
+42        1         0.00%
+44        1         0.00%
+46        1         0.00%
+47        1         0.00%
+53        1         0.00%
+54        1         0.00%
+56        1         0.00%
+61        1         0.00%
+317       1         0.00%
+81        1         0.00%
+345       1         0.00%
+99        1         0.00%
+101       1         0.00%
+.................................
+最后一步操作分布比例：总数： 54034.0
+................................
+操作                     比例
+45-45               28.85%
+43-43               19.50%
+47-47               9.43%
+6-进入安全页面            6.16%
+58-58               5.25%
+1-显示插屏广告            3.29%
+20-点击HOME键盘         3.19%
+8-点击FULL扫描          2.31%
+3-点击广告              1.77%
+59-59               1.76%
+44-44               1.58%
+10-进入APP LOCKER     1.36%
+21-双击回退键            1.25%
+9-点击隐私清理            1.24%
+51-51               1.07%
+71-71               1.00%
+72-72               0.95%
+49-49               0.90%
+12-点击省电             0.64%
+7-点击WIFI扫描          0.63%
+48-48               0.59%
+31-退出带功能弹窗          0.49%
+13-点击降温             0.46%
+46-46               0.43%
+29-清理系统缓存中退出        0.38%
+15-点击清理             0.37%
+11-点击加速             0.36%
+2-点击插屏广告            0.36%
+14-点击即时耗电           0.33%
+4-进入加速页面            0.32%
+52-52               0.32%
+17-强力清理页面           0.32%
+57-57               0.31%
+5-进入清理主页面           0.31%
+54-54               0.30%
+53-53               0.27%
+18-点击即时网络           0.22%
+73-73               0.21%
+22-显示充电页面           0.19%
+16-系统缓存页面           0.19%
+36-36               0.13%
+41-41               0.13%
+26-清理中退出            0.11%
+33-33               0.11%
+23-显示实时防护页面         0.10%
+25-加速中退出            0.10%
+28-省电中退出            0.09%
+35-35               0.08%
+24-安全扫描中退出          0.06%
+32-显示高级防护页面         0.06%
+40-40               0.03%
+27-降温中退出            0.02%
+19-点击即时CPU          0.02%
+34-34               0.02%
+39-39               0.02%
+38-38               0.01%
+55-55               0.01%
+68-68               0.01%
+37-37               0.01%
+85-85               0.01%
+75-75               0.00%
+82-82               0.00%
+##Info:Binary XML file line #20: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:593)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:666)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:691)****android.view.LayoutInflater.rInflate(LayoutInflater.java:752)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.inflate(LayoutInflater.java:495)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.b.<init>(MainCleanPage.java:122)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:251)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5326)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1097)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2218)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2309)****android.app.ActivityThread.access$700(ActivityThread.java:157)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1289)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:176)****android.app.ActivityThread.main(ActivityThread.java:5319)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1102)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:869)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:17##62.8M##Running:23953800##TotalMemory:0.95G##AvailMemory:160M##DP:800/480##Device:SAMSUNG GT-I9060-##Info:Binary XML file line #20: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:593)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:666)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:691)****android.view.LayoutInflater.rInflate(LayoutInflater.java:752)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.inflate(LayoutInflater.java:495)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.b.<init>(MainCleanPage.java:122)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:251)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5326)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1097)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2218)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2309)****android.app.ActivityThread.access$700(ActivityThread.java:157)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1289)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:176)****android.app.ActivityThread.main(ActivityThread.java:5319)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1102)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:869)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:17##62.8M##Running:23953800##TotalMemory:0.95G##AvailMemory:160M##DP:800/480##Device:SAMSUNG GT-I90600.00%
+7G##AvailMemory:712M##DP:1280/720##Device:SAMSUNG GT-I9305-7G##AvailMemory:712M##DP:1280/720##Device:SAMSUNG GT-I93050.00%
+9G##AvailMemory:679M##DP:1280/752##Device:ECS TR10CS1-9G##AvailMemory:679M##DP:1280/752##Device:ECS TR10CS10.00%
+8G##AvailMemory:342M##DP:1776/1080##Device:LGE LG-D800-8G##AvailMemory:342M##DP:1776/1080##Device:LGE LG-D8000.00%
+##Info:Binary XML file line #39: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:593)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:666)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:691)****android.view.LayoutInflater.rInflate(LayoutInflater.java:752)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.inflate(LayoutInflater.java:495)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5326)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1097)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2218)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2309)****android.app.ActivityThread.access$700(ActivityThread.java:157)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1289)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:176)****android.app.ActivityThread.main(ActivityThread.java:5319)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1102)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:869)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:17##62.9M##Running:23954242##TotalMemory:0.95G##AvailMemory:161M##DP:800/480##Device:SAMSUNG GT-I9060-##Info:Binary XML file line #39: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:593)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:666)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:691)****android.view.LayoutInflater.rInflate(LayoutInflater.java:752)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.rInflate(LayoutInflater.java:760)****android.view.LayoutInflater.inflate(LayoutInflater.java:495)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5326)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1097)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2218)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2309)****android.app.ActivityThread.access$700(ActivityThread.java:157)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1289)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:176)****android.app.ActivityThread.main(ActivityThread.java:5319)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1102)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:869)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:17##62.9M##Running:23954242##TotalMemory:0.95G##AvailMemory:161M##DP:800/480##Device:SAMSUNG GT-I90600.00%
+9G##AvailMemory:678M##DP:1280/752##Device:ECS TR10CS1-9G##AvailMemory:678M##DP:1280/752##Device:ECS TR10CS10.00%
+60-60               0.00%
+7G##AvailMemory:714M##DP:1280/720##Device:SAMSUNG GT-I9305-7G##AvailMemory:714M##DP:1280/720##Device:SAMSUNG GT-I93050.00%
+63-63               0.00%
+66-66               0.00%
+7M##DP:960/540##Device:SAMSUNG SM-G3812B-7M##DP:960/540##Device:SAMSUNG SM-G3812B0.00%
+##Info:Binary XML file line #20: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.b.<init>(MainCleanPage.java:122)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:251)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5206)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1094)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2064)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2125)****android.app.ActivityThread.access$600(ActivityThread.java:140)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1227)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:137)****android.app.ActivityThread.main(ActivityThread.java:4898)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1008)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:775)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:16##75.1M##Running:21399900##TotalMemory:1.7G##AvailMemory:1.0G##DP:1280/720##Device:SAMSUNG GT-N7105T-##Info:Binary XML file line #20: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.b.<init>(MainCleanPage.java:122)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:251)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5206)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1094)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2064)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2125)****android.app.ActivityThread.access$600(ActivityThread.java:140)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1227)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:137)****android.app.ActivityThread.main(ActivityThread.java:4898)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1008)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:775)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:16##75.1M##Running:21399900##TotalMemory:1.7G##AvailMemory:1.0G##DP:1280/720##Device:SAMSUNG GT-N7105T0.00%
+##Info:Binary XML file line #39: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5206)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1094)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2064)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2125)****android.app.ActivityThread.access$600(ActivityThread.java:140)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1227)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:137)****android.app.ActivityThread.main(ActivityThread.java:4898)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1008)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:775)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:16##74.8M##Running:21400119##TotalMemory:1.7G##AvailMemory:1.0G##DP:1280/720##Device:SAMSUNG GT-N7105T-##Info:Binary XML file line #39: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5206)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1094)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2064)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2125)****android.app.ActivityThread.access$600(ActivityThread.java:140)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1227)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:137)****android.app.ActivityThread.main(ActivityThread.java:4898)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1008)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:775)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:16##74.8M##Running:21400119##TotalMemory:1.7G##AvailMemory:1.0G##DP:1280/720##Device:SAMSUNG GT-N7105T0.00%
+##Info:Binary XML file line #39: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:423)****android.view.LayoutInflater.createView(LayoutInflater.java:600)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:675)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:700)****android.view.LayoutInflater.rInflate(LayoutInflater.java:761)****android.view.LayoutInflater.rInflate(LayoutInflater.java:769)****android.view.LayoutInflater.rInflate(LayoutInflater.java:769)****android.view.LayoutInflater.rInflate(LayoutInflater.java:769)****android.view.LayoutInflater.inflate(LayoutInflater.java:498)****android.view.LayoutInflater.inflate(LayoutInflater.java:398)****android.view.LayoutInflater.inflate(LayoutInflater.java:354)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5389)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2256)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2350)****android.app.ActivityThread.access$800(ActivityThread.java:163)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1257)****android.os.Handler.dispatchMessage(Handler.java:102)****android.os.Looper.loop(Looper.java:157)****android.app.ActivityThread.main(ActivityThread.java:5335)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:515)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1265)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1081)****dalvik.system.NativeStart.main(Native Method)##Lang:ar##Verion:19##佟伽侉M##Running:18906525##TotalMemory:佗佾侑G##AvailMemory:侑佶佗M##DP:1920/1080##Device:SAMSUNG SM-N9005-##Info:Binary XML file line #39: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:423)****android.view.LayoutInflater.createView(LayoutInflater.java:600)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:675)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:700)****android.view.LayoutInflater.rInflate(LayoutInflater.java:761)****android.view.LayoutInflater.rInflate(LayoutInflater.java:769)****android.view.LayoutInflater.rInflate(LayoutInflater.java:769)****android.view.LayoutInflater.rInflate(LayoutInflater.java:769)****android.view.LayoutInflater.inflate(LayoutInflater.java:498)****android.view.LayoutInflater.inflate(LayoutInflater.java:398)****android.view.LayoutInflater.inflate(LayoutInflater.java:354)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5389)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2256)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2350)****android.app.ActivityThread.access$800(ActivityThread.java:163)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1257)****android.os.Handler.dispatchMessage(Handler.java:102)****android.os.Looper.loop(Looper.java:157)****android.app.ActivityThread.main(ActivityThread.java:5335)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:515)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1265)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1081)****dalvik.system.NativeStart.main(Native Method)##Lang:ar##Verion:19##佟伽侉M##Running:18906525##TotalMemory:佗佾侑G##AvailMemory:侑佶佗M##DP:1920/1080##Device:SAMSUNG SM-N90050.00%
+9G##AvailMemory:699M##DP:1280/752##Device:ECS TR10CS1-9G##AvailMemory:699M##DP:1280/752##Device:ECS TR10CS10.00%
+##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##127M##Running:17860533##TotalMemory:0B##AvailMemory:697M##DP:1280/752##Device:ECS TR10CS1-##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##127M##Running:17860533##TotalMemory:0B##AvailMemory:697M##DP:1280/752##Device:ECS TR10CS10.00%
+9G##AvailMemory:698M##DP:1280/752##Device:ECS TR10CS1-9G##AvailMemory:698M##DP:1280/752##Device:ECS TR10CS10.00%
+##Info:Binary XML file line #15: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:423)****android.view.LayoutInflater.createView(LayoutInflater.java:594)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:669)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:694)****android.view.LayoutInflater.rInflate(LayoutInflater.java:755)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.inflate(LayoutInflater.java:492)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5263)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1099)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2247)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2357)****android.app.ActivityThread.access$800(ActivityThread.java:151)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1243)****android.os.Handler.dispatchMessage(Handler.java:102)****android.os.Looper.loop(Looper.java:136)****android.app.ActivityThread.main(ActivityThread.java:5380)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:515)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:970)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:786)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:19##47.8M##Running:50128823##TotalMemory:452M##AvailMemory:81.2M##DP:800/480##Device:Itel it1407-##Info:Binary XML file line #15: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:423)****android.view.LayoutInflater.createView(LayoutInflater.java:594)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:669)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:694)****android.view.LayoutInflater.rInflate(LayoutInflater.java:755)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.inflate(LayoutInflater.java:492)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.b.a.<init>(MainBoostPage.java:124)****com.lm.powersecurity.activity.MainActivity.a(MainActivity.java:252)****com.lm.powersecurity.activity.MainActivity.onCreate(MainActivity.java:128)****android.app.Activity.performCreate(Activity.java:5263)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1099)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2247)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2357)****android.app.ActivityThread.access$800(ActivityThread.java:151)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1243)****android.os.Handler.dispatchMessage(Handler.java:102)****android.os.Looper.loop(Looper.java:136)****android.app.ActivityThread.main(ActivityThread.java:5380)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:515)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:970)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:786)****dalvik.system.NativeStart.main(Native Method)##Lang:en##Verion:19##47.8M##Running:50128823##TotalMemory:452M##AvailMemory:81.2M##DP:800/480##Device:Itel it14070.00%
+42-42               0.00%
+.................................
+在2步操作退出的情况下，第一个操作分布比例：总数： 4415.0
+................................
+操作                     比例
+58-58               41.90%
+57-57               27.66%
+8-点击FULL扫描          10.37%
+1-显示插屏广告            5.35%
+3-点击广告              4.19%
+43-43               2.56%
+20-点击HOME键盘         2.11%
+6-进入安全页面            1.13%
+71-71               1.04%
+2-点击插屏广告            0.77%
+5-进入清理主页面           0.48%
+47-47               0.34%
+0-0                 0.32%
+12-点击省电             0.27%
+29-清理系统缓存中退出        0.25%
+46-46               0.20%
+22-显示充电页面           0.14%
+32-显示高级防护页面         0.14%
+10-进入APP LOCKER     0.09%
+52-52               0.07%
+53-53               0.07%
+34-34               0.07%
+44-44               0.05%
+48-48               0.05%
+13-点击降温             0.05%
+9-点击隐私清理            0.05%
+40-40               0.05%
+23-显示实时防护页面         0.02%
+25-加速中退出            0.02%
+##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##126M##Running:17852095##TotalMemory:1-##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##126M##Running:17852095##TotalMemory:10.02%
+31-退出带功能弹窗          0.02%
+75-75               0.02%
+54-54               0.02%
+39-39               0.02%
+##Info:Binary XML file line #480: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:423)****android.view.LayoutInflater.createView(LayoutInflater.java:594)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:669)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:694)****android.view.LayoutInflater.rInflate(LayoutInflater.java:755)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.inflate(LayoutInflater.java:492)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:71)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:46)****android.app.Activity.performCreate(Activity.java:5275)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1087)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2164)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2250)****android.app.ActivityThread.access$800(ActivityThread.java:139)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1200)****android.os.Handler.dispatchMessage(Handler.java:102)****android.os.Looper.loop(Looper.java:136)****android.app.ActivityThread.main(ActivityThread.java:5105)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:515)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:786)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:602)****dalvik.system.NativeStart.main(Native Method)##Lang:fr##Verion:19##267M##Running:184398222##TotalMemory:1-##Info:Binary XML file line #480: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:423)****android.view.LayoutInflater.createView(LayoutInflater.java:594)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:669)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:694)****android.view.LayoutInflater.rInflate(LayoutInflater.java:755)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.rInflate(LayoutInflater.java:758)****android.view.LayoutInflater.inflate(LayoutInflater.java:492)****android.view.LayoutInflater.inflate(LayoutInflater.java:397)****android.view.LayoutInflater.inflate(LayoutInflater.java:353)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:71)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:46)****android.app.Activity.performCreate(Activity.java:5275)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1087)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2164)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2250)****android.app.ActivityThread.access$800(ActivityThread.java:139)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1200)****android.os.Handler.dispatchMessage(Handler.java:102)****android.os.Looper.loop(Looper.java:136)****android.app.ActivityThread.main(ActivityThread.java:5105)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:515)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:786)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:602)****dalvik.system.NativeStart.main(Native Method)##Lang:fr##Verion:19##267M##Running:184398222##TotalMemory:10.02%
+##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##126M##Running:17842961##TotalMemory:1-##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##126M##Running:17842961##TotalMemory:10.02%
+7-点击WIFI扫描          0.02%
+##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##127M##Running:49582199##TotalMemory:1-##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickChargingActivity.java:62)****com.lm.powersecurity.activity.QuickChargingActivity.onCreate(QuickChargingActivity.java:43)****android.app.Activity.performCreate(Activity.java:5104)****android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1080)****android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2227)****android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2313)****android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:3775)****android.app.ActivityThread.access$700(ActivityThread.java:144)****android.app.ActivityThread$H.handleMessage(ActivityThread.java:1323)****android.os.Handler.dispatchMessage(Handler.java:99)****android.os.Looper.loop(Looper.java:152)****android.app.ActivityThread.main(ActivityThread.java:5132)****java.lang.reflect.Method.invokeNative(Native Method)****java.lang.reflect.Method.invoke(Method.java:511)****com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)****com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)****dalvik.system.NativeStart.main(Native Method)##Lang:es##Verion:17##127M##Running:49582199##TotalMemory:10.02%
+##Info:Binary XML file line #585: Error inflating class <unknown>##Cause:java.lang.reflect.InvocationTargetException##Exception:null##StackTrace:****java.lang.reflect.Constructor.constructNative(Native Method)****java.lang.reflect.Constructor.newInstance(Constructor.java:417)****android.view.LayoutInflater.createView(LayoutInflater.java:587)****com.android.internal.policy.impl.PhoneLayoutInflater.onCreateView(PhoneLayoutInflater.java:56)****android.view.LayoutInflater.onCreateView(LayoutInflater.java:660)****android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:685)****android.view.LayoutInflater.rInflate(LayoutInflater.java:746)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.rInflate(LayoutInflater.java:749)****android.view.LayoutInflater.inflate(LayoutInflater.java:489)****android.view.LayoutInflater.inflate(LayoutInflater.java:396)****android.view.LayoutInflater.inflate(LayoutInflater.java:352)****com.lm.powersecurity.h.a.a.<init>(Page.java:48)****com.lm.powersecurity.h.c.b.<init>(QuickChargingPage.java:66)****com.lm.powersecurity.activity.QuickChargingActivity.initViewPager(QuickC
